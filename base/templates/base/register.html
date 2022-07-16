@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +8,14 @@
     <title>Login</title>
 </head>
 <body>
-    <h1>Login</h1>
+    <h1>Register</h1>
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p}}
 
-        <input type="submit" value="Login">
+        <input type="submit" value="Register">
     </form>
 
-    <p>Dont't Have an Account? <a href="{% url 'register' %}">Register</a></p>
+    <p>Alredy Registered? <a href="{% url 'login' %}">Login</a></p>
 </body>
 </html>

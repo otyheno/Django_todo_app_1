@@ -2,7 +2,7 @@
 
 from django.urls import path
 #from . import views
-from .views import customLoginView, taskList, taskDetail, taskCreate, taskUpdate, taskDelete, customLoginView
+from .views import customLoginView, taskList, taskDetail, taskCreate, taskUpdate, taskDelete, customLoginView, registerPage
 
 from django.contrib.auth.views import LogoutView
 
@@ -10,6 +10,7 @@ urlpatterns = [
     
     path('login/', customLoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
+    path('register/', registerPage.as_view(), name='register'),
 
     #path('', views.taskList)
     path('', taskList.as_view(), name='tasks'),
